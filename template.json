@@ -689,7 +689,8 @@
 						"medtechie"
 					]
 				},
-				"age": 35
+				"age": 35,
+				"humanity": 50
 			},
 			"lifepath": {
 				"lifepath": {
@@ -784,9 +785,6 @@
 		}
 	},
 	"Item": {
-<<<<<<< HEAD
-		"types": ["skill", "weapon", "armor", "cyberware", "vehicle", "misc"],
-=======
 		"types": [
 			"weapon",
 			"armor",
@@ -794,7 +792,6 @@
 			"vehicle",
 			"misc"
 		],
->>>>>>> 92a276f8e2bac1a94caec7c22723ef4d613bca5a
 		"templates": {
 			"common": {
 				"flavor": "",
