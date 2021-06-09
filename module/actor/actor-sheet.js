@@ -2,6 +2,7 @@ import { martialOptions, meleeAttackTypes, meleeBonkOptions, rangedModifiers, we
 import { localize } from "../utils.js"
 import { ModifiersDialog } from "../dialog/modifiers.js"
 import { SortOrders } from "./skill-sort.js";
+import { LifepathUtils } from "./lifepath-utils.js";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -18,7 +19,9 @@ export class CyberpunkActorSheet extends ActorSheet {
       // Default window dimensions
       width: 590,
       height: 600,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "skills" }]
+      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "skills" },
+        {navSelector: ".lifepath-tabs", contentSelector: ".lifepath-section", initial:"style"}
+      ]
     });
   }
 
@@ -220,5 +223,8 @@ export class CyberpunkActorSheet extends ActorSheet {
       });
       dialog.render(true);
     });
+
+    // LIFE PATH TRIGGERS
+    LifepathUtils.bindHTMLEvents(html, this.actor);
   }
 }
