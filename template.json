@@ -786,6 +786,7 @@
 	},
 	"Item": {
 		"types": [
+			"skill",
 			"weapon",
 			"armor",
 			"cyberware",
