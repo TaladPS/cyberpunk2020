@@ -1,7 +1,8 @@
 {
 	"Actor": {
 		"types": [
-			"character", "npc"
+			"character",
+			"npc"
 		],
 		"templates": {
 			"stats": {
@@ -688,15 +689,35 @@
 						"medtechie"
 					]
 				},
-				"age": 35,
-				"humanity": 50
+				"age": 35
 			},
 			"lifepath": {
-				"events": "",
-				"family": "",
-				"style": "",
-				"motivations": "",
-				"notes": ""
+				"lifepath": {
+					"lifeEvents": [],
+					"familyBackground": {
+						"ranking": "",
+						"parents": "",
+						"history": "",
+						"siblings": []
+					},
+					"personalStyle": {
+						"clothes": "",
+						"hair": "",
+						"affectations": ""
+					},
+					"ethnicity": {
+						"origin": "",
+						"language": ""
+					},
+					"personalMotivations": {
+						"traits": "",
+						"valuedPerson": "",
+						"valueMost": "",
+						"feelAboutPeople": "",
+						"valuedPossession": ""
+					},
+					"notes": ""
+				}
 			},
 			"hitLocations": {
 				"hitLocations": {
@@ -763,7 +784,17 @@
 		}
 	},
 	"Item": {
+<<<<<<< HEAD
 		"types": ["skill", "weapon", "armor", "cyberware", "vehicle", "misc"],
+=======
+		"types": [
+			"weapon",
+			"armor",
+			"cyberware",
+			"vehicle",
+			"misc"
+		],
+>>>>>>> 92a276f8e2bac1a94caec7c22723ef4d613bca5a
 		"templates": {
 			"common": {
 				"flavor": "",
@@ -786,7 +817,9 @@
 			"stat": "cool"
 		},
 		"weapon": {
-			"templates": ["common"],
+			"templates": [
+				"common"
+			],
 			"weaponType": "Pistol",
 			"accuracy": 0,
 			"concealability": "P",
@@ -809,7 +842,9 @@
 			"attackSkill": "ref"
 		},
 		"armor": {
-			"templates": ["common"],
+			"templates": [
+				"common"
+			],
 			"coverage": {
 				"Head": {
 					"stoppingPower": 0,
@@ -839,7 +874,9 @@
 			"encumbrance": 0
 		},
 		"cyberware": {
-			"templates": ["common"],
+			"templates": [
+				"common"
+			],
 			"surgCode": "N",
 			"humanityCost": "1d6",
 			"cyberwareType": "",
@@ -850,7 +887,9 @@
 			"humanityLoss": 0
 		},
 		"vehicle": {
-			"templates": ["common"],
+			"templates": [
+				"common"
+			],
 			"sdp": {
 				"value": 50,
 				"max": 50
@@ -875,7 +914,9 @@
 			}
 		},
 		"misc": {
-			"templates": ["common"]
+			"templates": [
+				"common"
+			]
 		}
 	}
 }

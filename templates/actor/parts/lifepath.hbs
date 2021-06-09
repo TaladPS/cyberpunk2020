@@ -1,0 +1,185 @@
+<div class="lifepath-section">
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="lifepath-tabs tabs" data-group="lifepath">
+        <a class="item" data-tab="style">{{localize 'CYBERPUNK.LifepathStyle'}}</a>
+        <a class="item" data-tab="motivations">{{localize 'CYBERPUNK.LifepathMotivations'}}</a>
+        <a class="item" data-tab="family">{{localize 'CYBERPUNK.LifepathFamily'}}</a>
+        <a class="item" data-tab="events">{{localize 'CYBERPUNK.LifepathEvents'}}</a>
+        <a class="item" data-tab="notes">{{localize 'CYBERPUNK.LifepathNotes'}}</a>
+    </nav>
+    {{!-- Sheet Body --}}
+    <section class="content lifepath-section">
+        <div class="tab style flexcol" data-group="lifepath" data-tab="style">
+            <div class="field-list">
+                <div class="field">
+                    <label for="data.lifepath.personalStyle.clothes">{{localize
+                        'CYBERPUNK.LifepathStyleClothes'}}</label>
+                    <input name="data.lifepath.personalStyle.clothes" type="text"
+                        value="{{data.lifepath.personalStyle.clothes}}">
+                </div>
+                <div class="field">
+                    <label for="data.lifepath.personalStyle.hair">{{localize 'CYBERPUNK.LifepathStyleHair'}}</label>
+                    <input name="data.lifepath.personalStyle.hair" type="text"
+                        value="{{data.lifepath.personalStyle.hair}}">
+                </div>
+                <div class="field">
+                    <label for="data.lifepath.personalStyle.affectations">{{localize
+                        'CYBERPUNK.LifepathStyleAffectations'}}</label>
+                    <input name="data.lifepath.personalStyle.affectations" type="text"
+                        value="{{data.lifepath.personalStyle.affectations}}">
+                </div>
+                <div class="field">
+                    <label for="data.lifepath.ethnicity.origin">{{localize 'CYBERPUNK.LifepathEthnicity'}}</label>
+                    <input name="data.lifepath.ethnicity.origin" type="text" value="{{data.lifepath.ethnicity.origin}}">
+                </div>
+                <div class="field">
+                    <label for="data.lifepath.ethnicity.language">{{localize 'CYBERPUNK.LifepathLanguage'}}</label>
+                    <input name="data.lifepath.ethnicity.language" type="text"
+                        value="{{data.lifepath.ethnicity.language}}">
+                </div>
+            </div>
+        </div>
+        <div class="tab motivations flexcol" data-group="lifepath" data-tab="motivations">
+            <div class="field-list">
+                <div class="field">
+                    <label for="data.lifepath.personalMotivations.traits">{{localize
+                        'CYBERPUNK.LifepathMotivationsTrait'}}</label>
+                    <input name="data.lifepath.personalMotivations.traits" type="text"
+                        value="{{data.lifepath.personalMotivations.traits}}">
+                </div>
+                <div class="field">
+                    <label for="data.lifepath.personalMotivations.valuedPerson">{{localize
+                        'CYBERPUNK.LifepathMotivationsValuedPerson'}}</label>
+                    <input name="data.lifepath.personalMotivations.valuedPerson" type="text"
+                        value="{{data.lifepath.personalMotivations.valuedPerson}}">
+                </div>
+                <div class="field">
+                    <label for="data.lifepath.personalMotivations.valueMost">{{localize
+                        'CYBERPUNK.LifepathMotivationsValueMost'}}</label>
+                    <input name="data.lifepath.personalMotivations.valueMost" type="text"
+                        value="{{data.lifepath.personalMotivations.valueMost}}">
+                </div>
+                <div class="field">
+                    <label for="data.lifepath.personalMotivations.feelAboutPeople">{{localize
+                        'CYBERPUNK.LifepathMotivationsFeelAboutPeople'}}</label>
+                    <input name="data.lifepath.personalMotivations.feelAboutPeople" type="text"
+                        value="{{data.lifepath.personalMotivations.feelAboutPeople}}">
+                </div>
+                <div class="field">
+                    <label for="data.lifepath.personalMotivations.valuedPossession">{{localize
+                        'CYBERPUNK.LifepathMotivationsValuedPossession'}}</label>
+                    <input name="data.lifepath.personalMotivations.valuedPossession" type="text"
+                        value="{{data.lifepath.personalMotivations.valuedPossession}}">
+                </div>
+            </div>
+        </div>
+        <div class="tab family flexcol" data-group="lifepath" data-tab="family">
+            <div>
+                <label for="data.lifepath.familyBackground.ranking">{{localize
+                    'CYBERPUNK.LifepathFamilyRanking'}}</label>
+                <input name="data.lifepath.familyBackground.ranking" type="text"
+                    value="{{data.lifepath.familyBackground.ranking}}">
+            </div>
+            <div>
+                <label for="data.lifepath.familyBackground.parents">{{localize
+                    'CYBERPUNK.LifepathFamilyParents'}}</label>
+                <input name="data.lifepath.familyBackground.parents" type="text"
+                    value="{{data.lifepath.familyBackground.parents}}">
+            </div>
+            <div>
+                <label for="data.lifepath.familyBackground.history">{{localize
+                    'CYBERPUNK.LifepathFamilyBackground'}}</label>
+                <textarea class="notes" name="data.lifepath.familyBackground.history"
+                    placeholder="" row="4">{{data.lifepath.familyBackground.history}}</textarea>
+            </div>
+            <div>
+                <div>{{localize 'CYBERPUNK.LifepathFamilySiblings'}}</div>
+                <ul class="family-siblings">
+                    <li class="sibling-row">
+                        <div class="sibling-name-col">{{localize 'CYBERPUNK.LifepathFamilySiblingsName'}}</div>
+                        <div class="sibling-remove-col"></div>
+                        <div class="sibling-age-col">{{localize 'CYBERPUNK.LifepathFamilySiblingsAge'}}</div>
+                        <div class="sibling-gender-col">{{localize 'CYBERPUNK.LifepathFamilySiblingsGender'}}</div>
+                        <div class="sibling-feeling-col">{{localize 'CYBERPUNK.LifepathFamilySiblingsFeeling'}}</div>
+                    </li>
+                    {{#each data.lifepath.familyBackground.siblings as |sibling index|}}
+                    <li class="sibling-row" data-index="{{key}}">
+                        <div class="sibling-name-col">
+                            <input type="text" class="sibling-edit-input" data-index="{{index}}" data-property="name" value="{{sibling.name}}">
+                        </div>
+                        <div class="sibling-remove-col">
+                            <span class="remove-sibling remove-button">X</span></div>
+                        <div class="sibling-age-col">
+                            <select class="sibling-edit-input" data-index="{{index}}" data-property="age" value="{{sibling.age}}">
+                                <option value="" {{#if (equals sibling.age '')}}selected{{/if}}></option>
+                                <option value="older" {{#if (equals sibling.age 'older')}}selected{{/if}}>{{localize 'CYBERPUNK.LifepathFamilySiblingsAgeOld'}}</option>
+                                <option value="younger" {{#if (equals sibling.age 'younger')}}selected{{/if}}>{{localize 'CYBERPUNK.LifepathFamilySiblingsAgeYoung'}}</option>
+                                <option value="twin" {{#if (equals sibling.age 'twin')}}selected{{/if}}>{{localize 'CYBERPUNK.LifepathFamilySiblingsAgeTwin'}}</option>
+                            </select>
+                        </div>
+                        <div class="sibling-gender-col">
+                            <select class="sibling-edit-input" data-index="{{index}}" data-property="gender" value="{{sibling.gender}}">
+                                <option value="" {{#if (equals sibling.gender '')}}selected{{/if}}></option>
+                                <option value="brother" {{#if (equals sibling.gender 'brother')}}selected{{/if}}>{{localize 'CYBERPUNK.LifepathFamilyBrother'}}</option>
+                                <option value="sister" {{#if (equals sibling.gender 'sister')}}selected{{/if}}>{{localize 'CYBERPUNK.LifepathFamilySister'}}</option>
+                                <option value="sib" {{#if (equals sibling.gender 'sib')}}selected{{/if}}>{{localize 'CYBERPUNK.LifepathFamilySibling'}}</option>
+                            </select>
+                        </div>
+                        <div class="sibling-feeling-col">
+                            <select class="sibling-edit-input" data-index="{{index}}" data-property="feels" value="{{sibling.feels}}">
+                                <option value="" {{#if (equals sibling.feels '')}}selected{{/if}}></option>
+                                <option value="neutral" {{#if (equals sibling.feels 'neutral')}}selected{{/if}}>{{localize 'CYBERPUNK.LifepathFamilySiblingsFeelingNeutral'}}</option>
+                                <option value="likes" {{#if (equals sibling.feels 'likes')}}selected{{/if}}>{{localize 'CYBERPUNK.LifepathFamilySiblingsFeelingLikes'}}</option>
+                                <option value="dislikes" {{#if (equals sibling.feels 'dislikes')}}selected{{/if}}>{{localize 'CYBERPUNK.LifepathFamilySiblingsFeelingDislikes'}}</option>
+                                <option value="worships" {{#if (equals sibling.feels 'worships')}}selected{{/if}}>{{localize 'CYBERPUNK.LifepathFamilySiblingsFeelingWorships'}}</option>
+                                <option value="hates" {{#if (equals sibling.feels 'hates')}}selected{{/if}}>{{localize 'CYBERPUNK.LifepathFamilySiblingsFeelingHates'}}</option>
+                            </select>
+                        </div>
+                    </li>
+                    {{/each}}
+                    <li class="flexrow">
+                        <div class="flexcol add-sibling add-button">
+                            +
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab events flexcol" data-group="lifepath" data-tab="events">
+            <ul class="lifepath-life-events">
+                <li>
+                    <div class="lp-year-col">
+                        {{localize 'CYBERPUNK.LifepathEventsYear'}}
+                    </div>
+                    <div class="lp-remove-col"></div>
+                    <div class="lp-desc-col">
+                        {{localize 'CYBERPUNK.LifepathEventsDesc'}}
+                    </div>
+                </li>
+                {{#each data.lifepath.lifeEvents as |event index|}}
+                <li>
+                    <div  class="lp-year-col">
+                        <input class="update-year" type="number" min="16" data-index="{{index}}" value="{{event.year}}">                        
+                    </div>
+                    <div class="lp-remove-col">
+                       <span class="remove-year remove-button" data-index="{{index}}">X</span>
+                    </div>
+                    <div class="lp-desc-col">
+                        <textarea row="4" class="lp-event-desc" data-index="{{index}}" placeholder="">{{event.description}}</textarea>
+                    </div>                    
+                </li>
+                {{/each}}
+                <li class="flexrow">
+                    <div class="flexcol add-life-event add-button">
+                        +
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="tab notes flexcol" data-group="lifepath" data-tab="notes">
+            <div class="biography">
+                <textarea class="notes" name="data.lifepath.notes" placeholder="">{{data.lifepath.notes}}</textarea>
+            </div>
+        </div>
+    </section>
+</div>
