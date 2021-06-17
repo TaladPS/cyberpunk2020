@@ -2,8 +2,8 @@
     "name": "cyberpunk2020",
     "title": "Cyberpunk 2020",
     "description": "R. Talsorian Games' Cyberpunk 2020 System",
-    "version": "0.2.6",
-    "compatibleCoreVersion": "0.7.10",
+    "version": "0.3.1",
+    "compatibleCoreVersion": "0.8.6",
     "templateVersion": 2,
     "author": "OctarineSourcerer",
     "scripts": [],
@@ -16,6 +16,20 @@
         "system": "cyberpunk2020",
         "path": "./packs/roll-tables.db",
         "entity": "RollTable"
+      },
+      {
+        "name": "default-skills",
+        "label": "Default Skills",
+        "system": "cyberpunk2020",
+        "path": "./packs/default-skills.db",
+        "entity": "Item"
+      },
+      {
+        "name": "role-skills",
+        "label": "Role Skills",
+        "system": "cyberpunk2020",
+        "path": "./packs/role-skills.db",
+        "entity": "Item"
       },
       {
         "name": "pistols",
@@ -159,6 +173,6 @@
     "secondaryTokenAttribute": null,
     "url": "https://github.com/OctarineSourcerer/cyberpunk2020",
     "manifest": "https://raw.githubusercontent.com/OctarineSourcerer/cyberpunk2020/main/system.json",
-    "download": "https://github.com/OctarineSourcerer/cyberpunk2020/archive/v0.2.5.zip"
+    "download": "https://github.com/OctarineSourcerer/cyberpunk2020/archive/v0.3.1.zip"
   }
   
