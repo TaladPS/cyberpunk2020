@@ -18,7 +18,7 @@ export async function migrateWorld() {
     for(let item of game.items.entities) {
         migrateEntity(item);
     }
-    for(let compendium of game.packs.entries) {
+    for(let compendium of game.packs.entries()) {
         migrateCompendium(compendium);
     }
     game.settings.set("cyberpunk", "systemMigrationVersion", game.system.data.version);
