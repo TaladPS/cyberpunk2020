@@ -193,6 +193,12 @@ export class CyberpunkActor extends Actor {
     return body - this.woundState() + 1; 
   }
 
+  isMortallyWounded() {
+    // Mortal 0 is the 4th wound state
+    return this.woundState() >= 4;
+  }
+
+  // Threshold to beat for death saves
   deathThreshold() {
     // The first wound state to penalise is Mortal 1 instead of Serious.
     return this.stunThreshold() + 3;
@@ -263,16 +269,22 @@ export class CyberpunkActor extends Actor {
   }
 
   rollStunDeath() {
-    let rolls = new Multiroll(localize("StunDeathSave"), localize("UnderThresholdMessage"));
+    let rollsDeath = this.isMortallyWounded();
+    let title = localize(rollsDeath ? "StunDeathSave" : "StunSave");
+    let message = localize(rollsDeath ? "UnderThresholdMessage" : "StunThresholdMessage");
+    
+    let rolls = new Multiroll(title, message);
     rolls.addRoll(new Roll("1d10"), {
       name: localize("Save")
     });
     rolls.addRoll(new Roll(`${this.stunThreshold()}`), {
       name: "Stun Threshold"
     });
-    rolls.addRoll(new Roll(`${this.deathThreshold()}`), {
-      name: "Death Threshold"
-    });
+    if(rollsDeath) {
+      rolls.addRoll(new Roll(`${this.deathThreshold()}`), {
+        name: "Death Threshold"
+      });
+    }
     rolls.defaultExecute();
   }
 }
