@@ -243,6 +243,9 @@ details[open] summary ~ * {
 .cyberpunk .field:hover > .field-image.roll {
   background-image: url("../../../icons/svg/d10-grey.svg") !important;
 }
+.cyberpunk .field label {
+  flex: 2;
+}
 .cyberpunk .field > input {
   border: 0 none;
   border-radius: 0px;
@@ -255,17 +258,25 @@ details[open] summary ~ * {
   color: black;
   font-family: "Open Sans ExtraBold", sans-serif;
   padding-left: 5px;
-  padding-right: 0px;
   flex-grow: 1;
   flex-shrink: 1;
 }
 .cyberpunk .field > input[type=checkbox] {
+  min-width: 2.5em;
+  margin-left: 0px;
+  margin-right: 0px;
+  flex-grow: 0;
   -webkit-appearance: checkbox;
 }
 .cyberpunk .field > input[type=number] {
   width: 2.5em;
   padding-left: 0px;
   text-align: center;
+  flex-grow: 0;
+}
+.cyberpunk .field > input[type=number].more-room {
+  width: 6em;
+  flex-grow: 1;
 }
 .cyberpunk .field > input[type=number].smallnumber {
   width: 1.5em;

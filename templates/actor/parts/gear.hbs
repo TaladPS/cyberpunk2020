@@ -2,7 +2,6 @@
   <div class="field gear item-edit rc-item-delete" data-item-id="{{id}}">
             <div class="field-image roll fire-weapon action" style="background-image: url({{img}})" data-item-id="{{id}}"></div>
             <label>{{name}}</label>
-            <span class="flex-pad"></span>
             <span>
                 <p class="inactive">{{type}}</p>
             </span>
@@ -12,11 +11,11 @@
 <div class="field-list no-wrap">
     <div class="field">
         <label for="data.eurobucks">{{CPLocal "Eurobucks"}}</label>
-        <input name="data.eurobucks" type="number" value="{{data.eurobucks}}">
+        <input name="data.eurobucks" type="number" value="{{data.eurobucks}}" class="more-room">
     </div>
     <div class="field">
         <label for="data.carryWeight">{{CPLocal "Weight"}}</label>
-        <input class="not-editable" name="data.carryWeight" type="number" value="{{data.carryWeight}}" readonly>
+        <input class="more-room" name="data.carryWeight" type="number" value="{{data.carryWeight}}" readonly>
     </div>
 </div>
 

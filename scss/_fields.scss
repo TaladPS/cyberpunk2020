@@ -61,18 +61,26 @@
         background-image: url("../../../icons/svg/d10-grey.svg") !important;
     }
 
+    label {
+        flex: 2;
+    }
     >input {
         @include reset-input;
         background-color: unset;
         color: $text-colour;
         font-family: $font-secondary;
         padding-left: 5px;
-        padding-right: 0px;
+        // padding-right: 5px;
         flex-grow: 1;
         flex-shrink: 1;
 
         &[type=checkbox] {
+            // Setting width doesn't seem to widen these lads
+            min-width: 2.5em;
+            margin-left: 0px;
+            margin-right: 0px;
             // This is apparently non-standard. I'd like to find an alternate method
+            flex-grow: 0;
             -webkit-appearance: checkbox;
         }
 
@@ -81,6 +89,11 @@
             // With center text, no padding needed
             padding-left: 0px;
             text-align: center;
+            flex-grow: 0;
+            &.more-room {
+                width: 6em;
+                flex-grow: 1;
+            }
         }
         &[type=number].smallnumber {
             width: 1.5em;
@@ -116,5 +129,6 @@
         font-size: larger;
         font-style: italic;
     }
+
     // Do I do a thing for divs here? when it's just displaying and isn't visible
 }

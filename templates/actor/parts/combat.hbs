@@ -21,7 +21,6 @@
         {{> (template "actor/parts/armor-display") hitLocations=data.hitLocations hitLocsName="hitLocations"}}
         <div class="field margin-bottom">
             <label for="data.stats.ref.armorMod">{{CPLocal "Encumbrance"}}</label>
-            <span class="flex-pad"></span>
             <input type="number" name="data.stats.ref.armorMod" value="{{data.stats.ref.armorMod}}" class="number nogrow not-editable" readonly>
         </div>
         
@@ -30,7 +29,6 @@
             <div class="field item-edit" data-item-id="{{id}}">
                 <div class="field-image" style="background-image: url({{img}})" data-item-id="{{id}}"></div>
                 <label class="name">{{name}}</label>
-                <span class="flex-pad"></span>
                 <span>
                     <label class="inactive">{{armorSummary data.data.coverage}}</label>
                 </span>
@@ -47,7 +45,6 @@
             <div class="fire-weapon field action" data-item-id="{{weapon.id}}">
                 <div class="no-action field-image item-edit" style="background-image: url({{weapon.img}})" data-item-id="{{weapon.id}}"></div>
                 <label class="name">{{weapon.name}}</label>
-                <span class="flex-pad"></span>
                 <span>
                     {{#with weapon.data.data}}
                     <div class="field-label inactive">{{#if attackType}}{{attackType}}{{else}}{{weaponType}}{{/if}}</div>

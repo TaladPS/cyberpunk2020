@@ -35,7 +35,6 @@
     {{!-- This might not need to be custom anymore, as regular selects can deal with choices that supply their own translateKeys --}}
     <div class="field">
         <label for="data.attackSkill">{{CPLocal "AttackSkill"}}</label>
-        <div class="flex-pad"></div>
         <select name="data.attackSkill">
             {{#each attackSkills as |skill|}}
             <option value="{{skill}}" {{#if (equals ../data.attackSkill skill)}}selected{{/if}}>{{skill}}</option>
