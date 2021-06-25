@@ -202,4 +202,8 @@ export function registerHandlebarsHelpers() {
         }
         return "";
     });
+
+    Handlebars.registerHelper("var", function (name, value, options) {
+        this[name] = value;
+    });
 }

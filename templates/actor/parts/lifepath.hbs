@@ -1,108 +1,95 @@
 <div class="lifepath-section">
     {{!-- Sheet Tab Navigation --}}
     <nav class="lifepath-tabs tabs" data-group="lifepath">
-        <a class="item active" data-tab="style">{{localize 'CYBERPUNK.LifepathStyle'}}</a>
-        <a class="item" data-tab="motivations">{{localize 'CYBERPUNK.LifepathMotivations'}}</a>
-        <a class="item" data-tab="family">{{localize 'CYBERPUNK.LifepathFamily'}}</a>
-        <a class="item" data-tab="events">{{localize 'CYBERPUNK.LifepathEvents'}}</a>
-        <a class="item" data-tab="notes">{{localize 'CYBERPUNK.LifepathNotes'}}</a>
+        <a class="item active" data-tab="style">{{CPLocal 'LifepathStyle'}}</a>
+        <a class="item" data-tab="motivations">{{CPLocal 'LifepathMotivations'}}</a>
+        <a class="item" data-tab="family">{{CPLocal 'LifepathFamily'}}</a>
+        <a class="item" data-tab="events">{{CPLocal 'LifepathEvents'}}</a>
+        <a class="item" data-tab="notes">{{CPLocal 'LifepathNotes'}}</a>
     </nav>
     {{!-- Sheet Body --}}
     <section class="content lifepath-section">
         <div class="tab style flexcol" data-group="lifepath" data-tab="style">
+            {{#with data.lifepath.personalStyle}}
+            {{var "style" "data.lifepath.personalStyle"}}
             <div class="field-list">
                 <div class="field">
-                    <label for="data.lifepath.personalStyle.clothes">{{localize
-                        'CYBERPUNK.LifepathStyleClothes'}}</label>
-                    <input name="data.lifepath.personalStyle.clothes" type="text"
-                        value="{{data.lifepath.personalStyle.clothes}}">
+                    <label for="{{style}}.clothes">{{CPLocal 'LifepathStyleClothes'}}</label>
+                    <input name="{{style}}.clothes" type="text" value="{{clothes}}">
                 </div>
                 <div class="field">
-                    <label for="data.lifepath.personalStyle.hair">{{localize 'CYBERPUNK.LifepathStyleHair'}}</label>
-                    <input name="data.lifepath.personalStyle.hair" type="text"
-                        value="{{data.lifepath.personalStyle.hair}}">
+                    <label for="{{style}}.hair">{{CPLocal 'LifepathStyleHair'}}</label>
+                    <input name="{{style}}.hair" type="text" value="{{hair}}">
+                </div>  
+                <div class="field">
+                    <label for="{{style}}.affectations">{{CPLocal 'LifepathStyleAffectations'}}</label>
+                    <input name="{{style}}.affectations" type="text" value="{{affectations}}">
                 </div>
                 <div class="field">
-                    <label for="data.lifepath.personalStyle.affectations">{{localize
-                        'CYBERPUNK.LifepathStyleAffectations'}}</label>
-                    <input name="data.lifepath.personalStyle.affectations" type="text"
-                        value="{{data.lifepath.personalStyle.affectations}}">
+                    <label for="data.lifepath.ethnicity.origin">{{CPLocal 'LifepathEthnicity'}}</label>
+                    <input name="data.lifepath.ethnicity.origin" type="text" value="{{../data.lifepath.ethnicity.origin}}">
                 </div>
                 <div class="field">
-                    <label for="data.lifepath.ethnicity.origin">{{localize 'CYBERPUNK.LifepathEthnicity'}}</label>
-                    <input name="data.lifepath.ethnicity.origin" type="text" value="{{data.lifepath.ethnicity.origin}}">
-                </div>
-                <div class="field">
-                    <label for="data.lifepath.ethnicity.language">{{localize 'CYBERPUNK.LifepathLanguage'}}</label>
-                    <input name="data.lifepath.ethnicity.language" type="text"
-                        value="{{data.lifepath.ethnicity.language}}">
+                    <label for="data.lifepath.ethnicity.language">{{CPLocal 'LifepathLanguage'}}</label>
+                    <input name="data.lifepath.ethnicity.language" type="text" value="{{../data.lifepath.ethnicity.language}}">
                 </div>
             </div>
+            {{/with}}
+
         </div>
         <div class="tab motivations flexcol" data-group="lifepath" data-tab="motivations">
+            {{#with data.lifepath.personalMotivations}}
+            {{var "motives" "data.lifepath.personalMotivations"}}
             <div class="field-list">
                 <div class="field">
-                    <label for="data.lifepath.personalMotivations.traits">{{localize
-                        'CYBERPUNK.LifepathMotivationsTrait'}}</label>
-                    <input name="data.lifepath.personalMotivations.traits" type="text"
-                        value="{{data.lifepath.personalMotivations.traits}}">
+                    <label for="{{motives}}.traits">{{CPLocal 'LifepathMotivationsTrait'}}</label>
+                    <input name="{{motives}}.traits" type="text" value="{{traits}}">
                 </div>
                 <div class="field">
-                    <label for="data.lifepath.personalMotivations.valuedPerson">{{localize
-                        'CYBERPUNK.LifepathMotivationsValuedPerson'}}</label>
-                    <input name="data.lifepath.personalMotivations.valuedPerson" type="text"
-                        value="{{data.lifepath.personalMotivations.valuedPerson}}">
+                    <label for="{{motives}}.valuedPerson">{{CPLocal 'LifepathMotivationsValuedPerson'}}</label>
+                    <input name="{{motives}}.valuedPerson" type="text" value="{{valuedPerson}}">
                 </div>
                 <div class="field">
-                    <label for="data.lifepath.personalMotivations.valueMost">{{localize
-                        'CYBERPUNK.LifepathMotivationsValueMost'}}</label>
-                    <input name="data.lifepath.personalMotivations.valueMost" type="text"
-                        value="{{data.lifepath.personalMotivations.valueMost}}">
+                    <label for="{{motives}}.valueMost">{{CPLocal 'LifepathMotivationsValueMost'}}</label>
+                    <input name="{{motives}}.valueMost" type="text" value="{{valueMost}}">
                 </div>
                 <div class="field">
-                    <label for="data.lifepath.personalMotivations.feelAboutPeople">{{localize
-                        'CYBERPUNK.LifepathMotivationsFeelAboutPeople'}}</label>
-                    <input name="data.lifepath.personalMotivations.feelAboutPeople" type="text"
-                        value="{{data.lifepath.personalMotivations.feelAboutPeople}}">
+                    <label for="{{motives}}.feelAboutPeople">{{CPLocal 'LifepathMotivationsFeelAboutPeople'}}</label>
+                    <input name="{{motives}}.feelAboutPeople" type="text" value="{{feelAboutPeople}}">
                 </div>
                 <div class="field">
-                    <label for="data.lifepath.personalMotivations.valuedPossession">{{localize
-                        'CYBERPUNK.LifepathMotivationsValuedPossession'}}</label>
-                    <input name="data.lifepath.personalMotivations.valuedPossession" type="text"
-                        value="{{data.lifepath.personalMotivations.valuedPossession}}">
+                    <label for="{{motives}}.valuedPossession">{{CPLocal 'LifepathMotivationsValuedPossession'}}</label>
+                    <input name="{{motives}}.valuedPossession" type="text" value="{{valuedPossession}}">
                 </div>
             </div>
+            {{/with}}
         </div>
         <div class="tab family flexcol" data-group="lifepath" data-tab="family">
+            {{#with data.lifepath.familyBackground}}
+            {{var "family" "data.lifepath.familyBackground"}}
             <div>
-                <label for="data.lifepath.familyBackground.ranking">{{localize
-                    'CYBERPUNK.LifepathFamilyRanking'}}</label>
-                <input name="data.lifepath.familyBackground.ranking" type="text"
-                    value="{{data.lifepath.familyBackground.ranking}}">
+                <label for="{{family}}.ranking">{{CPLocal 'LifepathFamilyRanking'}}</label>
+                <input name="{{family}}.ranking" type="text" value="{{ranking}}">
             </div>
             <div>
-                <label for="data.lifepath.familyBackground.parents">{{localize
-                    'CYBERPUNK.LifepathFamilyParents'}}</label>
-                <input name="data.lifepath.familyBackground.parents" type="text"
-                    value="{{data.lifepath.familyBackground.parents}}">
+                <label for="{{family}}.parents">{{CPLocal 'LifepathFamilyParents'}}</label>
+                <input name="{{family}}.parents" type="text" value="{{parents}}">
             </div>
             <div>
-                <label for="data.lifepath.familyBackground.history">{{localize
-                    'CYBERPUNK.LifepathFamilyBackground'}}</label>
-                <textarea class="notes" name="data.lifepath.familyBackground.history"
-                    placeholder="" row="4">{{data.lifepath.familyBackground.history}}</textarea>
+                <label for="{{family}}.history">{{CPLocal 'LifepathFamilyBackground'}}</label>
+                <textarea class="notes" name="{{family}}.history" placeholder="" row="4">{{history}}</textarea>
             </div>
             <div>
-                <div>{{localize 'CYBERPUNK.LifepathFamilySiblings'}}</div>
+                <div>{{CPLocal 'LifepathFamilySiblings'}}</div>
                 <ul class="family-siblings">
                     <li class="sibling-row">
-                        <div class="sibling-name-col">{{localize 'CYBERPUNK.LifepathFamilySiblingsName'}}</div>
+                        <div class="sibling-name-col">{{CPLocal 'LifepathFamilySiblingsName'}}</div>
                         <div class="sibling-remove-col"></div>
-                        <div class="sibling-age-col">{{localize 'CYBERPUNK.LifepathFamilySiblingsAge'}}</div>
-                        <div class="sibling-gender-col">{{localize 'CYBERPUNK.LifepathFamilySiblingsGender'}}</div>
-                        <div class="sibling-feeling-col">{{localize 'CYBERPUNK.LifepathFamilySiblingsFeeling'}}</div>
+                        <div class="sibling-age-col">{{CPLocal 'LifepathFamilySiblingsAge'}}</div>
+                        <div class="sibling-gender-col">{{CPLocal 'LifepathFamilySiblingsGender'}}</div>
+                        <div class="sibling-feeling-col">{{CPLocal 'LifepathFamilySiblingsFeeling'}}</div>
                     </li>
-                    {{#each data.lifepath.familyBackground.siblings as |sibling index|}}
+                    {{#each siblings as |sibling index|}}
                     <li class="sibling-row" data-index="{{key}}">
                         <div class="sibling-name-col">
                             <input type="text" class="sibling-edit-input" data-index="{{index}}" data-property="name" value="{{sibling.name}}">
@@ -112,27 +99,27 @@
                         <div class="sibling-age-col">
                             <select class="sibling-edit-input" data-index="{{index}}" data-property="age" value="{{sibling.age}}">
                                 <option value="" {{#if (equals sibling.age '')}}selected{{/if}}></option>
-                                <option value="older" {{#if (equals sibling.age 'older')}}selected{{/if}}>{{localize 'CYBERPUNK.LifepathFamilySiblingsAgeOld'}}</option>
-                                <option value="younger" {{#if (equals sibling.age 'younger')}}selected{{/if}}>{{localize 'CYBERPUNK.LifepathFamilySiblingsAgeYoung'}}</option>
-                                <option value="twin" {{#if (equals sibling.age 'twin')}}selected{{/if}}>{{localize 'CYBERPUNK.LifepathFamilySiblingsAgeTwin'}}</option>
+                                <option value="older" {{#if (equals sibling.age 'older')}}selected{{/if}}>{{CPLocal 'LifepathFamilySiblingsAgeOld'}}</option>
+                                <option value="younger" {{#if (equals sibling.age 'younger')}}selected{{/if}}>{{CPLocal 'LifepathFamilySiblingsAgeYoung'}}</option>
+                                <option value="twin" {{#if (equals sibling.age 'twin')}}selected{{/if}}>{{CPLocal 'LifepathFamilySiblingsAgeTwin'}}</option>
                             </select>
                         </div>
                         <div class="sibling-gender-col">
                             <select class="sibling-edit-input" data-index="{{index}}" data-property="gender" value="{{sibling.gender}}">
                                 <option value="" {{#if (equals sibling.gender '')}}selected{{/if}}></option>
-                                <option value="brother" {{#if (equals sibling.gender 'brother')}}selected{{/if}}>{{localize 'CYBERPUNK.LifepathFamilyBrother'}}</option>
-                                <option value="sister" {{#if (equals sibling.gender 'sister')}}selected{{/if}}>{{localize 'CYBERPUNK.LifepathFamilySister'}}</option>
-                                <option value="sib" {{#if (equals sibling.gender 'sib')}}selected{{/if}}>{{localize 'CYBERPUNK.LifepathFamilySibling'}}</option>
+                                <option value="brother" {{#if (equals sibling.gender 'brother')}}selected{{/if}}>{{CPLocal 'LifepathFamilyBrother'}}</option>
+                                <option value="sister" {{#if (equals sibling.gender 'sister')}}selected{{/if}}>{{CPLocal 'LifepathFamilySister'}}</option>
+                                <option value="sib" {{#if (equals sibling.gender 'sib')}}selected{{/if}}>{{CPLocal 'LifepathFamilySibling'}}</option>
                             </select>
                         </div>
                         <div class="sibling-feeling-col">
                             <select class="sibling-edit-input" data-index="{{index}}" data-property="feels" value="{{sibling.feels}}">
                                 <option value="" {{#if (equals sibling.feels '')}}selected{{/if}}></option>
-                                <option value="neutral" {{#if (equals sibling.feels 'neutral')}}selected{{/if}}>{{localize 'CYBERPUNK.LifepathFamilySiblingsFeelingNeutral'}}</option>
-                                <option value="likes" {{#if (equals sibling.feels 'likes')}}selected{{/if}}>{{localize 'CYBERPUNK.LifepathFamilySiblingsFeelingLikes'}}</option>
-                                <option value="dislikes" {{#if (equals sibling.feels 'dislikes')}}selected{{/if}}>{{localize 'CYBERPUNK.LifepathFamilySiblingsFeelingDislikes'}}</option>
-                                <option value="worships" {{#if (equals sibling.feels 'worships')}}selected{{/if}}>{{localize 'CYBERPUNK.LifepathFamilySiblingsFeelingWorships'}}</option>
-                                <option value="hates" {{#if (equals sibling.feels 'hates')}}selected{{/if}}>{{localize 'CYBERPUNK.LifepathFamilySiblingsFeelingHates'}}</option>
+                                <option value="neutral" {{#if (equals sibling.feels 'neutral')}}selected{{/if}}>{{CPLocal 'LifepathFamilySiblingsFeelingNeutral'}}</option>
+                                <option value="likes" {{#if (equals sibling.feels 'likes')}}selected{{/if}}>{{CPLocal 'LifepathFamilySiblingsFeelingLikes'}}</option>
+                                <option value="dislikes" {{#if (equals sibling.feels 'dislikes')}}selected{{/if}}>{{CPLocal 'LifepathFamilySiblingsFeelingDislikes'}}</option>
+                                <option value="worships" {{#if (equals sibling.feels 'worships')}}selected{{/if}}>{{CPLocal 'LifepathFamilySiblingsFeelingWorships'}}</option>
+                                <option value="hates" {{#if (equals sibling.feels 'hates')}}selected{{/if}}>{{CPLocal 'LifepathFamilySiblingsFeelingHates'}}</option>
                             </select>
                         </div>
                     </li>
@@ -144,16 +131,17 @@
                     </li>
                 </ul>
             </div>
+            {{/with}}
         </div>
         <div class="tab events flexcol" data-group="lifepath" data-tab="events">
             <ul class="lifepath-life-events">
                 <li>
                     <div class="lp-year-col">
-                        {{localize 'CYBERPUNK.LifepathEventsYear'}}
+                        {{CPLocal 'LifepathEventsYear'}}
                     </div>
                     <div class="lp-remove-col"></div>
                     <div class="lp-desc-col">
-                        {{localize 'CYBERPUNK.LifepathEventsDesc'}}
+                        {{CPLocal 'LifepathEventsDesc'}}
                     </div>
                 </li>
                 {{#each data.lifepath.lifeEvents as |event index|}}
