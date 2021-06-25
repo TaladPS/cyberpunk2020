@@ -72,6 +72,9 @@ $field-border-width: 2px;
         }
     }
 }
+.cyberpunk section {
+    height: 100%;
+}
 
 
 /* Overall sheet structure */
@@ -239,4 +242,5 @@ details[open] summary ~ * {
 @import "itemSheets";
 @import "gear";
 @import "cards";
-@import "combat-tab"
+@import "combat-tab";
+@import "lifepath";

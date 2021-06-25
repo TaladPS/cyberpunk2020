@@ -14,6 +14,7 @@ export const preloadHandlebarsTemplates = async function() {
         "systems/cyberpunk2020/templates/actor/parts/combat.hbs",
         "systems/cyberpunk2020/templates/actor/parts/armor-display.hbs",
         "systems/cyberpunk2020/templates/actor/parts/skill.hbs",
+        "systems/cyberpunk2020/templates/actor/parts/lifepath.hbs",
 
         // Shared templates
         "systems/cyberpunk2020/templates/fields/string.hbs",

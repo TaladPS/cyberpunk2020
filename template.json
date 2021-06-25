@@ -1,7 +1,8 @@
 {
 	"Actor": {
 		"types": [
-			"character", "npc"
+			"character",
+			"npc"
 		],
 		"templates": {
 			"stats": {
@@ -692,11 +693,31 @@
 				"humanity": 50
 			},
 			"lifepath": {
-				"events": "",
-				"family": "",
-				"style": "",
-				"motivations": "",
-				"notes": ""
+				"lifepath": {
+					"lifeEvents": [],
+					"familyBackground": {
+						"ranking": "",
+						"parents": "",
+						"history": "",
+						"siblings": []
+					},
+					"personalStyle": {
+						"clothes": "",
+						"hair": "",
+						"affectations": ""
+					},
+					"ethnicity": {
+						"origin": "",
+						"language": ""
+					},
+					"personalMotivations": {
+						"traits": "",
+						"valuedPerson": "",
+						"valueMost": "",
+						"feelAboutPeople": "",
+						"valuedPossession": ""
+					}
+				}
 			},
 			"hitLocations": {
 				"hitLocations": {
@@ -748,7 +769,8 @@
 				"hitLocations",
 				"gear"
 			],
-			"damage": 0
+			"damage": 0,
+			"notes": ""
 		},
 		"npc": {
 			"templates": [
@@ -759,11 +781,19 @@
 				"hitLocations",
 				"gear"
 			],
-			"damage": 0
+			"damage": 0,
+			"notes": ""
 		}
 	},
 	"Item": {
-		"types": ["skill", "weapon", "armor", "cyberware", "vehicle", "misc"],
+		"types": [
+			"skill",
+			"weapon",
+			"armor",
+			"cyberware",
+			"vehicle",
+			"misc"
+		],
 		"templates": {
 			"common": {
 				"flavor": "",
@@ -786,7 +816,9 @@
 			"stat": "cool"
 		},
 		"weapon": {
-			"templates": ["common"],
+			"templates": [
+				"common"
+			],
 			"weaponType": "Pistol",
 			"accuracy": 0,
 			"concealability": "P",
@@ -809,7 +841,9 @@
 			"attackSkill": "ref"
 		},
 		"armor": {
-			"templates": ["common"],
+			"templates": [
+				"common"
+			],
 			"coverage": {
 				"Head": {
 					"stoppingPower": 0,
@@ -839,7 +873,9 @@
 			"encumbrance": 0
 		},
 		"cyberware": {
-			"templates": ["common"],
+			"templates": [
+				"common"
+			],
 			"surgCode": "N",
 			"humanityCost": "1d6",
 			"cyberwareType": "",
@@ -850,7 +886,9 @@
 			"humanityLoss": 0
 		},
 		"vehicle": {
-			"templates": ["common"],
+			"templates": [
+				"common"
+			],
 			"sdp": {
 				"value": 50,
 				"max": 50
@@ -875,7 +913,9 @@
 			}
 		},
 		"misc": {
-			"templates": ["common"]
+			"templates": [
+				"common"
+			]
 		}
 	}
 }

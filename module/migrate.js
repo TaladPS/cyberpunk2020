@@ -86,6 +86,25 @@ export async function migrateActorData(actorData) {
             updateData[`token.vision`] = true;
             updateData[`token.dimSight`] = 30;
         }
+        if(actorData.lifepath) { 
+            let lpnotes = '';
+            // TODO: Switch hard coded string with language json variable.
+            if(actorData.lifepath.events) {
+                lpnotes += `LIFE EVENTS: ${lifepath.events};\n\n`;
+            }
+            if(actorData.lifepath.family) {
+                lpnotes += `FAMILY: ${lifepath.family};\n\n`;
+            }
+            if(actorData.lifepath.style) {
+                lpnotes += `STYLE: ${lifepath.style};\n\n`;
+            }
+            if(actorData.lifepath.motivations) {
+                lpnotes += `MOTIVATIONS: ${lifepath.motivations};\n\n`;
+            }
+            update[`notes`] = `${actorData.notes} -- ${lpnotes}`;
+            // stop using lifepath
+            update[`lifepath`] = undefined;
+        }
     }
     
     // Traied skills that we keep
@@ -149,6 +168,13 @@ export async function migrateActorData(actorData) {
         const currentItems = Array.from(actorData.items).map(item => item.toObject());
         // TODO: This is repeated in a few places - centralise/refactor
         updateData.items = currentItems.concat(currentItems, skillsToAdd);
+    }
+
+    // convert the old 
+    if(!actorData.lifepath) { 
+        updateData.lifepath = {
+
+        }
     }
 
     return updateData;
