@@ -2,6 +2,10 @@
     height: 100% !important;
     display: block;
 }
+.lifepath-tabs {
+    // Less than the margin of the main sheet tabs, but a margin still - spacing to group things together
+    margin-bottom: 2px;
+}
 .lifepath-tabs .item {
     padding-top: 5px;
     padding-bottom: 5px;

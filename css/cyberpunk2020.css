@@ -723,6 +723,10 @@ div.statderive .value.rightborder {
   display: block;
 }
 
+.lifepath-tabs {
+  margin-bottom: 2px;
+}
+
 .lifepath-tabs .item {
   padding-top: 5px;
   padding-bottom: 5px;

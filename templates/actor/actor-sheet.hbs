@@ -32,6 +32,7 @@
         <a class="item" data-tab="gear">{{CPLocal 'TabGear'}}</a>
         <a class="item" data-tab="cyber">{{CPLocal 'TabCyber'}}</a>
         <a class="item" data-tab="life">{{CPLocal 'Life'}}</a>
+        <a class="item" data-tab="notes">{{CPLocal 'Notes'}}</a>
     </nav>
 
     {{!-- Sheet Body --}}
@@ -52,9 +53,13 @@
             {{> "systems/cyberpunk2020/templates/actor/parts/cyberware.hbs"}}
         </div>
 
-        {{!-- Biography Tab --}}
         <div class="tab life flexcol" data-group="primary" data-tab="life">
             {{> "systems/cyberpunk2020/templates/actor/parts/lifepath.hbs"}}
+        </div>
+        <div class="tab notes flexcol" data-group="primary" data-tab="notes">
+            <div class="biography">
+                {{editor content=data.notes target="data.notes" button=true owner=owner editable=options.editable}}
+            </div>
         </div>
     </section>
 </form>
