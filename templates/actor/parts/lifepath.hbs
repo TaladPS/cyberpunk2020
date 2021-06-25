@@ -1,7 +1,7 @@
-<div class="lifepath-section">
+<div>
     {{!-- Sheet Tab Navigation --}}
     <nav class="lifepath-tabs tabs" data-group="lifepath">
-        <a class="item active" data-tab="style">{{CPLocal 'LifepathStyleOrigin'}}</a>
+        <a class="item" data-tab="style">{{CPLocal 'LifepathStyleOrigin'}}</a>
         <a class="item" data-tab="motivations">{{CPLocal 'LifepathMotivations'}}</a>
         <a class="item" data-tab="family">{{CPLocal 'LifepathFamily'}}</a>
         <a class="item" data-tab="events">{{CPLocal 'LifepathEvents'}}</a>
@@ -11,7 +11,7 @@
         <div class="tab style flexcol" data-group="lifepath" data-tab="style">
             {{#with data.lifepath.personalStyle}}
             {{var "style" "data.lifepath.personalStyle"}}
-            <div class="field-list">
+            <div class="field-list one-col">
                 <div class="field">
                     <label for="{{style}}.clothes">{{CPLocal 'LifepathStyleClothes'}}</label>
                     <input name="{{style}}.clothes" type="text" value="{{clothes}}">
@@ -39,7 +39,7 @@
         <div class="tab motivations flexcol" data-group="lifepath" data-tab="motivations">
             {{#with data.lifepath.personalMotivations}}
             {{var "motives" "data.lifepath.personalMotivations"}}
-            <div class="field-list">
+            <div class="field-list one-col">
                 <div class="field">
                     <label for="{{motives}}.traits">{{CPLocal 'LifepathMotivationsTrait'}}</label>
                     <input name="{{motives}}.traits" type="text" value="{{traits}}">
