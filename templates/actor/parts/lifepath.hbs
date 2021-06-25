@@ -166,7 +166,8 @@
         </div>
         <div class="tab notes flexcol" data-group="lifepath" data-tab="notes">
             <div class="biography">
-                <textarea class="notes" name="data.lifepath.notes" placeholder="">{{data.lifepath.notes}}</textarea>
+                {{log this}}
+                {{editor content=data.lifepath.notes target="data.lifepath.notes" button=true owner=owner editable=options.editable}}
             </div>
         </div>
     </section>

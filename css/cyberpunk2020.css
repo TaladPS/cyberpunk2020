@@ -48,6 +48,10 @@
   background-color: darkorange;
 }
 
+.cyberpunk section {
+  height: 100%;
+}
+
 /* Overall sheet structure */
 .sheet header.cyberheader {
   display: flex;
