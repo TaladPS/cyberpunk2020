@@ -24,17 +24,18 @@
                     <label for="{{style}}.affectations">{{CPLocal 'LifepathStyleAffectations'}}</label>
                     <input name="{{style}}.affectations" type="text" value="{{affectations}}">
                 </div>
+            </div>
+            {{/with}}
+            <div class="field-list one-col">
                 <div class="field">
                     <label for="data.lifepath.ethnicity.origin">{{CPLocal 'LifepathEthnicity'}}</label>
-                    <input name="data.lifepath.ethnicity.origin" type="text" value="{{../data.lifepath.ethnicity.origin}}">
+                    <input name="data.lifepath.ethnicity.origin" type="text" value="{{data.lifepath.ethnicity.origin}}">
                 </div>
                 <div class="field">
                     <label for="data.lifepath.ethnicity.language">{{CPLocal 'LifepathLanguage'}}</label>
-                    <input name="data.lifepath.ethnicity.language" type="text" value="{{../data.lifepath.ethnicity.language}}">
+                    <input name="data.lifepath.ethnicity.language" type="text" value="{{data.lifepath.ethnicity.language}}">
                 </div>
             </div>
-            {{/with}}
-
         </div>
         <div class="tab motivations flexcol" data-group="lifepath" data-tab="motivations">
             {{#with data.lifepath.personalMotivations}}
