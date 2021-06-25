@@ -21,7 +21,7 @@ export class CyberpunkActorSheet extends ActorSheet {
       height: 600,
       tabs: [
         { navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "skills" },
-        {navSelector: ".lifepath-tabs", contentSelector: ".lifepath-section", initial:"style"}
+        { navSelector: ".lifepath-tabs", contentSelector: ".lifepath-section", initial:"style"}
       ]
     });
   }
