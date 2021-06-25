@@ -2,6 +2,10 @@
     height: 100% !important;
     display: block;
 }
+.lifepath-tabs .item {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
 
 .add-button {
     text-align:center;
@@ -42,7 +46,7 @@
     }
 
     .lp-year-col {
-        width: 45px;
+        width: 32px;
         vertical-align: top;
     }
 
@@ -51,7 +55,7 @@
     }
 
     .lp-remove-col {
-        width: 20xp;
+        width: 20px;
     }
 
     .lp-desc-col {
@@ -89,6 +93,4 @@
         }
 
     }
-
-
 }

@@ -1,4 +1,4 @@
-import { weaponTypes, rangedAttackTypes, meleeAttackTypes, fireModes, ranges, rangeDCs, rangeResolve, attackSkills, martialActions } from "../lookups.js"
+import { weaponTypes, rangedAttackTypes, meleeAttackTypes, fireModes, ranges, rangeDCs, rangeResolve, attackSkills, martialActions, strengthDamageBonus } from "../lookups.js"
 import { Multiroll, makeD10Roll }  from "../dice.js"
 import { clamp, deepLookup, localize, localizeParam, rollLocation } from "../utils.js"
 import { CyberpunkActor } from "../actor/actor.js";
@@ -366,7 +366,9 @@ export class CyberpunkItem extends Item {
   __meleeBonk(attackMods) {
     // Just doesn't have a DC - is contested instead
     let attackRoll = this.attackRoll(attackMods);
-    let damageRoll = new Roll(this.data.data.damage);
+    let damageRoll = new Roll(`${this.data.data.damage}+@strengthBonus`, {
+      strengthBonus: strengthDamageBonus(this.actor.data.data.stats.bt.total)
+    });
     let locationRoll = rollLocation(attackMods.targetActor, attackMods.targetArea);
 
     let bigRoll = new Multiroll(this.name, this.data.data.flavor)
@@ -378,44 +380,42 @@ export class CyberpunkItem extends Item {
   }
   __martialBonk(attackMods) {
     let actor = this.actor;
+    let actorData = actor.data.data;
     let action = attackMods.action;
     let martialArt = attackMods.martialArt;
 
     // Will be something this line once I add the martial arts bonuses. None for brawling, remember
     // let martialBonus = this.actor?.skills.MartialArts[martialArt].bonuses[action];
-    let martialBonus = 0;
+    let keyTechniqueBonus = 0;
     let attackBonus = actor.getSkillVal(martialArt);
     let flavor = game.i18n.has(`CYBERPUNK.${action + "Text"}`) ? localize(action + "Text") : "";
 
     let results = new Multiroll(localizeParam("MartialTitle", {action: localize(action), martialArt: localize("Skill" + martialArt)}), flavor);
 
     // All martial arts are contested
-    let attackRoll = new Roll(`1d10x10+@attackBonus+@stats.ref.total+@martialBonus`, {
-      stats: this.actor.data.data.stats,
+    let attackRoll = new Roll(`1d10x10+@stats.ref.total+@attackBonus+@keyTechniqueBonus`, {
+      stats: actorData.stats,
       attackBonus: attackBonus,
-      martialBonus: martialBonus
+      keyTechniqueBonus: keyTechniqueBonus,
     });
     results.addRoll(attackRoll, {name: "Attack"});
     let damageFormula = "";
 
     // Directly damaging things
     if(action == martialActions.strike) {
-      damageFormula = "1d3+@martialBonus";
+      damageFormula = "1d3+@strengthBonus+@martialDamageBonus";
     }
-    else if(action == martialActions.kick) {
-      damageFormula = "1d6+@martialBonus"; // Seriously, WHY is kicking objectively better?!
-    }
-    else if(action == martialActions.throw){
-      damageFormula = "1d6+@martialBonus";
-    }
-    else if(action == martialActions.choke) {
-      damageFormula = "1d6";
+    else if([martialActions.kick, martialActions.throw, martialActions.choke].includes(action)) {
+      damageFormula = "1d6+@strengthBonus+@martialDamageBonus"; // Seriously, WHY is kicking objectively better?!
     }
 
     if(damageFormula !== "") {
       let loc = rollLocation(attackMods.targetArea);
       results.addRoll(loc.roll, {name: localize("Location"), flavor: loc.areaHit});
-      results.addRoll(new Roll(damageFormula, {martialBonus: martialBonus}), {name: localize("Damage")});
+      results.addRoll(new Roll(damageFormula, {
+        strengthBonus: strengthDamageBonus(actorData.stats.bt.total),
+        martialDamageBonus: isMartial ? skillLevel : 0
+      }), {name: localize("Damage")});
     }
     results.defaultExecute({img: this.img});
     return results;

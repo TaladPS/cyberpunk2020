@@ -2,7 +2,7 @@
     "name": "cyberpunk2020",
     "title": "Cyberpunk 2020",
     "description": "R. Talsorian Games' Cyberpunk 2020 System",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "compatibleCoreVersion": "0.8.6",
     "templateVersion": 2,
     "author": "OctarineSourcerer",
@@ -58,6 +58,104 @@
         "path": "./packs/chipware.db",
         "system": "cyberpunk2020",
         "entity": "Item"
+      },
+      {
+        "name": "communication",
+        "label": "Communication",
+        "path": "./packs/communication.db",
+        "system": "cyberpunk2020",
+        "entity": "Item"
+      },
+      {
+        "name": "electronics",
+        "label": "Electronics",
+        "path": "./packs/electronics.db",
+        "system": "cyberpunk2020",
+        "entity": "Item"
+      },
+      {
+        "name": "entertainment",
+        "label": "Entertainment",
+        "path": "./packs/entertainment.db",
+        "system": "cyberpunk2020",
+        "entity": "Item"
+      },
+      {
+        "name": "fashion",
+        "label": "Fashion",
+        "path": "./packs/fashion.db",
+        "system": "cyberpunk2020",
+        "entity": "Item"
+      },
+      {
+        "name": "furnishing",
+        "label": "Furnishing",
+        "path": "./packs/furnishing.db",
+        "system": "cyberpunk2020",
+        "entity": "Item"
+      },
+      {
+        "name": "medical",
+        "label": "Medical",
+        "path": "./packs/medical.db",
+        "system": "cyberpunk2020",
+        "entity": "Item"
+      },
+      {  
+        "name": "netrunningEquipment",
+        "label": "Netrunning Equipment",
+        "path": "./packs/netrunningEquipment.db",
+        "system": "cyberpunk2020",
+        "entity": "Item"
+      },
+      {
+        "name": "security",
+        "label": "Security",
+        "path": "./packs/security.db",
+        "system": "cyberpunk2020",
+        "entity": "Item"
+      },
+      {
+        "name": "surveillance",
+        "label": "Surveillance",
+        "path": "./packs/surveillance.db",
+        "system": "cyberpunk2020",
+        "entity": "Item"
+      },
+      {
+        "name": "tools",
+        "label": "Tools",
+        "path": "./packs/tools.db",
+        "system": "cyberpunk2020",
+        "entity": "Item"
+      },
+      {
+        "name": "rentalandservices",
+        "label": "Rental&Services",
+        "path": "./packs/rentalandservices.db",
+        "system": "cyberpunk2020",
+        "entity": "Item"
+      },
+      {
+        "name": "sellthedead",
+        "label": "Sell the Dead",
+        "path": "./packs/sellTheDead.db",
+        "system": "cyberpunk2020",
+        "entity": "Item"
+      },
+      {
+        "name": "armor",
+        "label": "Armor",
+        "path": "./packs/armor.db",
+        "system": "cyberpunk2020",
+        "entity": "Item"
+      },
+      {
+        "name": "vehicles",
+        "label": "Vehicles",
+        "path": "./packs/vehicles.db",
+        "system": "cyberpunk2020",
+        "entity": "Item"
       }
     ],
     "languages": [
@@ -75,6 +173,6 @@
     "secondaryTokenAttribute": null,
     "url": "https://github.com/OctarineSourcerer/cyberpunk2020",
     "manifest": "https://raw.githubusercontent.com/OctarineSourcerer/cyberpunk2020/main/system.json",
-    "download": "https://github.com/OctarineSourcerer/cyberpunk2020/archive/v0.2.5.zip"
+    "download": "https://github.com/OctarineSourcerer/cyberpunk2020/archive/v0.3.1.zip"
   }
   

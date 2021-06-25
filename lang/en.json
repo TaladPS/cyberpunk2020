@@ -177,7 +177,7 @@
     "CYBERPUNK.Shots": "Shots",
     "CYBERPUNK.ShotsLeft": "Shots Left",
     "CYBERPUNK.AP": "AP",
-    "CYBERPUNK.RoF": "RoF",
+    "CYBERPUNK.RoF": "Rate of Fire",
     "CYBERPUNK.Reliability": "Reliability",
     "CYBERPUNK.Range": "Range",
     "CYBERPUNK.RangePointBlank": "Point Blank (<1m)",
@@ -373,6 +373,7 @@
     "CYBERPUNK.DragItemsPrompt": "Drag items here to add (for now)",
 
     "CYBERPUNK.InitiativeTrackerWarning": "At the moment, rolling initiative from the sheet doesn't add to the encounter's combat tracker.",
+    "CYBERPUNK.KeyTechniqueWarning": "Key technique bonuses for martial arts aren't implemented yet",
     "CYBERPUNK.MigrateMessage": "Migrating data of {target}",
 
     "CYBERPUNK.NPC": "NPC",

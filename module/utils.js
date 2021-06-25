@@ -29,7 +29,7 @@ export function localizeParam(str, params) {
 }
 
 export function shortLocalize(str) {
-    let makeShort = game.i18n.has["CYBERPUNK." + str + "Short"] !== undefined;
+    let makeShort = !!game.i18n.has("CYBERPUNK." + str + "Short");
     return tryLocalize(makeShort ? str + "Short" : str);
 }
 /**
@@ -93,7 +93,6 @@ export function clamp(x, min, max) {
 
 export async function getDefaultSkills() {
     const pack = game.packs.get("cyberpunk2020.default-skills");
-    // put into basickSkills array
     const content = await pack.getDocuments();
     return content;
 }
