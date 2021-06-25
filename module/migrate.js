@@ -170,13 +170,6 @@ export async function migrateActorData(actorData) {
         updateData.items = currentItems.concat(currentItems, skillsToAdd);
     }
 
-    // convert the old 
-    if(!actorData.lifepath) { 
-        updateData.lifepath = {
-
-        }
-    }
-
     return updateData;
 } 
 
