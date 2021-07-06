@@ -386,6 +386,7 @@ export class CyberpunkItem extends Item {
 
     // Will be something this line once I add the martial arts bonuses. None for brawling, remember
     // let martialBonus = this.actor?.skills.MartialArts[martialArt].bonuses[action];
+    let isMartial = martialArt != "Brawling";
     let keyTechniqueBonus = 0;
     let attackBonus = actor.getSkillVal(martialArt);
     let flavor = game.i18n.has(`CYBERPUNK.${action + "Text"}`) ? localize(action + "Text") : "";
