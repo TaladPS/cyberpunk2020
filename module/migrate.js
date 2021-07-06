@@ -211,16 +211,21 @@ export function migrateCompendium(compendium) {
 }
 
 // Take an old hardcoded skill and translate it into data for a skill item
-export function convertOldSkill(name, skillData) {
-    return {name: tryLocalize("Skill"+name, name), type: "skill", data: {
+export function convertOldSkill(name, skillData, localizeName=true) {
+    let newName = localizeName ? tryLocalize("Skill"+name, name) : name;
+    return {name: newName, type: "skill", data: {
+        // Player-determined, change over time
         flavor: "",
         notes: "",
         level: skillData.value || 0,
         chipLevel: skillData.chipValue || 0,
-        isChipped: skillData.chipped,
-        ip: skillData.ip,
-        diffMod: 1, // No skills have those currently.
+        isChipped: skillData.chipped || false,
+        ip: skillData.ip || 0,
+
+        // Dependent on the skill itself
+        diffMod: skillData.diffMod || 1, // No skills have those currently.
         isRoleSkill: skillData.isSpecial || false,
-        stat: skillData.stat
+        stat: skillData.stat,
+        isMartial: skillData.isMartial || false
     }};
 }
