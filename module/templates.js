@@ -11,6 +11,8 @@ export const preloadHandlebarsTemplates = async function() {
         "systems/cyberpunk2020/templates/actor/parts/skills.hbs",
         "systems/cyberpunk2020/templates/actor/parts/gear.hbs",
         "systems/cyberpunk2020/templates/actor/parts/cyberware.hbs",
+		"systems/cyberpunk2020/templates/actor/parts/cyberdeck.hbs",
+		"systems/cyberpunk2020/templates/actor/parts/program.hbs",
         "systems/cyberpunk2020/templates/actor/parts/combat.hbs",
         "systems/cyberpunk2020/templates/actor/parts/armor-display.hbs",
         "systems/cyberpunk2020/templates/actor/parts/skill.hbs",
@@ -39,6 +41,12 @@ export const preloadHandlebarsTemplates = async function() {
         // Cyberware
         "systems/cyberpunk2020/templates/item/parts/cyberware/summary.hbs",
         "systems/cyberpunk2020/templates/item/parts/cyberware/settings.hbs",
+		// Cyberdeck
+        "systems/cyberpunk2020/templates/item/parts/cyberdeck/summary.hbs",
+        "systems/cyberpunk2020/templates/item/parts/cyberdeck/settings.hbs",
+		// Programs
+        "systems/cyberpunk2020/templates/item/parts/program/summary.hbs",
+        "systems/cyberpunk2020/templates/item/parts/program/settings.hbs",		
         // Vehicle
         "systems/cyberpunk2020/templates/item/parts/vehicle/summary.hbs",
         "systems/cyberpunk2020/templates/item/parts/vehicle/settings.hbs",
