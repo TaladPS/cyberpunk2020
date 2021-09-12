@@ -1,0 +1,21 @@
+<div class="field-list">
+	{{> (template "fields/select") label="DeckType" edit="data.cyberdeckTypes" choices=cyberdeckTypes}}
+    {{> (template "fields/string") label="DeckCPU" edit="data.deckCPU"}}
+    {{> (template "fields/string") label="DeckMemory" edit="data.deckMemory"}}
+    {{> (template "fields/string") label="DeckSpeed" edit="data.deckSpeed"}}
+	{{> (template "fields/string") label="DeckDataWalls" edit="data.deckDataWalls"}}
+	{{> (template "fields/string") label="DeckCodeGate" edit="data.deckCodeGate"}}
+	{{> (template "fields/string") label="DeckIcon" edit="data.deckIcon"}}
+
+    <div class="span-two-cells">
+        <label for="data.deckOptions">{{CPLocal "DeckOptions"}}</label>
+    </div>
+	{{> (template "fields/boolean") label="DeckTrodeSets" edit="data.deckTrodeSets"}}
+	{{> (template "fields/boolean") label="DeckKeyboard" edit="data.deckKeyboard"}}
+	{{> (template "fields/boolean") label="DeckVideoboard" edit="data.deckVideoboard"}}
+	{{> (template "fields/boolean") label="DeckPrinter" edit="data.deckPrinter"}}
+	{{> (template "fields/boolean") label="DeckChipreader" edit="data.deckChipreader"}}
+	{{> (template "fields/boolean") label="DeckVoxBoxes" edit="data.deckVoxBoxes"}}
+	{{> (template "fields/boolean") label="DeckScanners" edit="data.deckScanners"}}
+	{{> (template "fields/string") label="DeckExtraChips" edit="data.deckExtraChips"}}	
+</div>

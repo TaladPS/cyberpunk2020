@@ -143,6 +143,30 @@ export let defaultAreaLookup = {
     9: "rLeg",
     10: "rLeg"
 }
+
+export let cyberdeckTypes = {
+    DeckTypeCellular: "DeckTypeCellular",
+    DeckTypePortable: "DeckTypePortable",
+    DeckTypeCombatDeck: "DeckTypeCombatDeck",
+    DeckTypeCyberlimb: "DeckTypeCyberlimb",
+    DeckTypeStandard: "DeckTypeStandard"
+}
+
+export let programClasses = {
+    DeckProgIntrusion: "DeckProgIntrusion",
+    DeckProgDecryption: "DeckProgDecryption",
+    DeckProgDetection: "DeckProgDetection",
+    DeckProgAntiSystem: "DeckProgAntiSystem",
+    DeckProgEvasion: "DeckProgEvasion",
+    DeckProgProtection: "DeckProgProtection",
+    DeckProgAntiIC: "DeckProgAntiIC",
+    DeckProgAntiPersonnel: "DeckProgAntiPersonnel",
+    DeckProgControllers: "DeckProgControllers",
+    DeckProgUtilities: "DeckProgUtilities",
+	DeckProgDemons: "DeckProgDemons",
+	DeckProgCustom: "DeckProgCustom"
+}
+
 export function defaultHitLocations() { return game.system.template.Actor.templates.hitLocations.hitLocations; }
 
 export function rangedModifiers(weapon) {

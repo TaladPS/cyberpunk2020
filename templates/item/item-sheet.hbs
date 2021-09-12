@@ -21,6 +21,11 @@
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="settings">{{CPLocal 'Settings'}}</a>
+		
+		    {{#if (equals item.type "cyberdeck")}}
+            <a class="item" data-tab="programs">{{CPLocal 'DeckPrograms'}}</a>
+            {{/if}}
+
         <a class="item" data-tab="notes">{{CPLocal 'Notes'}}</a>
     </nav>
 
