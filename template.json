@@ -925,28 +925,28 @@
 				"common"
 			],
 			"cyberdeckTypes" : "",
-            "deckCPU": "",
-            "deckMemory": "",
-            "deckSpeed": "",
-            "deckDataWalls": "",
-            "deckCodeGate": "",
+            "deckCPU": 1,
+            "deckMemory": 10,
+            "deckSpeed": 0,
+            "deckDataWalls": 2,
+            "deckCodeGate": 0,
             "deckIcon": "",
-            "deckTrodeSets": "",
-            "deckKeyboard": "",
-            "deckVideoboard": "",
-            "deckPrinter": "",
-            "deckChipreader": "",
-            "deckVoxBoxes": "",
-            "deckScanners": "",
-            "deckExtraChips": ""
+            "deckTrodeSets": false,
+            "deckKeyboard": false,
+            "deckVideoboard": false,
+            "deckPrinter": false,
+            "deckChipreader": false,
+            "deckVoxBoxes": false,
+            "deckScanners": false,
+            "deckExtraChips": 0
 		},
         "program": {
 			"templates": [
 				"common"
 			],
 			"programClasses" : "",
-			"deckProgStrength" : "",
-			"deckProgMU" : ""
+			"deckProgStrength" : 1,
+			"deckProgMU" : 1
 		}
 	}
 }
