@@ -1,4 +1,4 @@
-import { weaponTypes, sortedAttackTypes, concealability, availability, reliability, attackSkills, meleeAttackTypes, getStatNames } from "../lookups.js";
+import { weaponTypes, sortedAttackTypes, concealability, availability, reliability, attackSkills, meleeAttackTypes, getStatNames, cyberdeckTypes, programClasses } from "../lookups.js";
 import { formulaHasDice } from "../dice.js";
 import { localize } from "../utils.js";
 
@@ -50,6 +50,12 @@ export class CyberpunkItemSheet extends ItemSheet {
       case "skill":
         this._prepareSkill(data);
 
+      case "cyberdeck":
+        this._prepareCyberdeck(data);
+
+      case "program":
+        this._preparePrograms(data);
+
       default:
         break;
     }
@@ -83,6 +89,14 @@ export class CyberpunkItemSheet extends ItemSheet {
 
   _prepareArmor(data) {
     
+  }
+
+  _prepareCyberdeck(data) {
+    data.cyberdeckTypes = Object.values(cyberdeckTypes);
+  }
+  
+_preparePrograms(data) {
+	data.programClasses = Object.values(programClasses);
   }
 
   /* -------------------------------------------- */

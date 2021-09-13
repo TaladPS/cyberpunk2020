@@ -791,6 +791,8 @@
 			"weapon",
 			"armor",
 			"cyberware",
+			"cyberdeck",
+			"program",
 			"vehicle",
 			"misc"
 		],
@@ -917,6 +919,34 @@
 			"templates": [
 				"common"
 			]
+		},
+        "cyberdeck": {
+			"templates": [
+				"common"
+			],
+			"cyberdeckTypes" : "",
+            "deckCPU": "",
+            "deckMemory": "",
+            "deckSpeed": "",
+            "deckDataWalls": "",
+            "deckCodeGate": "",
+            "deckIcon": "",
+            "deckTrodeSets": "",
+            "deckKeyboard": "",
+            "deckVideoboard": "",
+            "deckPrinter": "",
+            "deckChipreader": "",
+            "deckVoxBoxes": "",
+            "deckScanners": "",
+            "deckExtraChips": ""
+		},
+        "program": {
+			"templates": [
+				"common"
+			],
+			"programClasses" : "",
+			"deckProgStrength" : "",
+			"deckProgMU" : ""
 		}
 	}
 }

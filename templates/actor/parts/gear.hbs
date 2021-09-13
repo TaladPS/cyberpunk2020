@@ -23,6 +23,7 @@
     <div class="inactive">Drag items here to add (for now)</div>
 {{/if}}
 <div class="field-list">
+    {{!-- Todo: This can be done in a MUCH less brittle way than just enumerating manually over types --}}
     {{#each gear.weapons}}
         {{> itemListing}}
     {{/each}}
@@ -34,5 +35,8 @@
     {{/each}}
     {{#each gear.vehicles}}
        {{> itemListing}}
+    {{/each}}
+    {{#each gear.cyberdeck}}
+        {{> itemListing}}
     {{/each}}
 </div>

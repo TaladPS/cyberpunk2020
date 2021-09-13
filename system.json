@@ -156,6 +156,13 @@
       "path": "./packs/vehicles.db",
       "system": "cyberpunk2020",
       "entity": "Item"
+    },
+    {
+      "name": "programs",
+      "label": "Netrunning Programs",
+      "path": "./packs/netrunningPrograms.db",
+      "system": "cyberpunk2020",
+      "entity": "Item"
     }
   ],
   "languages": [
