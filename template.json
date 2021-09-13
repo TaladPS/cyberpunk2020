@@ -929,6 +929,7 @@
             "deckMemory": 10,
             "deckSpeed": 0,
             "deckDataWalls": 2,
+            "deckCodeGate": 0,
             "deckIcon": "",
             "deckTrodeSets": false,
             "deckKeyboard": false,
