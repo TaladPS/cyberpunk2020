@@ -96,7 +96,7 @@ export class CyberpunkItemSheet extends ItemSheet {
   }
   
 _preparePrograms(data) {
-	data.programClasses = Object.values(programClasses);
+	  data.programClasses = Object.values(programClasses);
   }
 
   /* -------------------------------------------- */
